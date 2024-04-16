@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(38,39,61);
+    font-family: sans-serif;
+}
+
+.header-bar {
+    position: relative;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: fit-content;
+    padding: 0.5rem 1.5rem;
+    margin: auto;
+    margin-top: 2rem;
+    gap: 1rem;
+    background-color: rgb(21, 21, 21);
+
+    border-radius: 25px;
+    box-shadow: 0px 5px 30px 1px rgba(0, 0, 0, 0.5);
+}
+
+.header-bar::before,
+.header-bar::after {
+    content: '';
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    position: absolute;
+    background: linear-gradient(45deg,
+        #fd004c,
+        #fe9000,
+        #fff020,
+        #3edf4b,
+        #3363ff,
+        #b102b7,
+        #fd004c
+    );
+    border-radius: 25px;
+    background-size: 300%;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    0%, 100% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100%;
+    }
+}
+
+.head-item {
+    /* border: 1px solid white; */
+    width: 4rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    background-color: transparent;
+    font-size: 0.8rem;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+.head-item:hover {
+    background-color: white;
+}
+.head-item:hover .path {
+    stroke: #000000;
+}
